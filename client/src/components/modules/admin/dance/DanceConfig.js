@@ -11,7 +11,8 @@ export const styleOptions = [
     { key: 'o', text: 'Other', value: 'other' },
     { key: 'j', text: 'Jazz', value: 'jazz'},
     { key: 'jf', text: 'Jazz Funk', value: 'jazz funk'},
-    {key: 'k', text: 'Kuthu', value: 'kuthu'}
+    {key: 'k', text: 'Kuthu', value: 'kuthu'},
+    {key: 'm', text: 'Modern', value: 'modern'}
 ];
 
 export const levelOptions = [
