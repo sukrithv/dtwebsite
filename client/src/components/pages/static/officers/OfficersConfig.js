@@ -56,19 +56,19 @@ const officerOptions = [
   },
   {
     position: "Show Historian",
-    name: "Sophie Lu",
-    photoUrl: "/officer_images/Sophie.jpg"
+    name: "Taylor Dawson",
+    photoUrl: "/officer_images/Taylor.jpeg"
   },
   {
     position: "Webmaster",
     name: "Konnie Duan",
     photoUrl: "/officer_images/Konnie.jpg",
   },
-  {
-    position: "Tech Coordinator",
-    name: "Joshika Chakraverty",
-    photoUrl: "/officer_images/Joshika.jpg",
-  },
+  // {
+  //   position: "Tech Coordinator",
+  //   name: "Joshika Chakraverty",
+  //   photoUrl: "/officer_images/Joshika.jpg",
+  // },
   {
     position: "Costume Coordinator",
     name: "Leticia Stroeh",
