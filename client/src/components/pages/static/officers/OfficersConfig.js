@@ -12,7 +12,7 @@ const officerOptions = [
   {
     position: "Vice President",
     name: "Eunsu Choi",
-    photoUrl: "/officer_images/Eunsu.jpg",
+    photoUrl: "/officer_images/Eunsu.jpeg",
   },
   {
     position: "Secretary",
@@ -32,7 +32,7 @@ const officerOptions = [
   {
     position: "Pub Chair",
     name: "Richard Yeboah",
-    photoUrl: "/officer_images/PlaceHolder.jpg",
+    photoUrl: "/officer_images/Richard.jpg",
   },
   // {
   //   position: "Pub Chair",
@@ -57,7 +57,7 @@ const officerOptions = [
   {
     position: "Show Historian",
     name: "Jaelynn Agraan",
-    photoUrl: "/officer_images/PlaceHolder.jpeg"
+    photoUrl: "/officer_images/Jaelynn.jpg"
   },
   {
     position: "Webmaster",
@@ -72,7 +72,7 @@ const officerOptions = [
   {
     position: "Costume Coordinator",
     name: "Rachel Waggoner",
-    photoUrl: "/officer_images/Leticia.jpg",
+    photoUrl: "/officer_images/Rachel.jpg",
   },
 ];
 

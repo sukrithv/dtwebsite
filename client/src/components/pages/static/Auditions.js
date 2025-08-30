@@ -171,7 +171,7 @@ class Auditions extends Component {
           <h1>Auditions</h1>
           <h2>TLDR</h2>
           <h3>
-            <b>Date:</b> February 8th and 9th, 2025<br />
+            <b>Date:</b> September 6th and 7th, 2025<br />
             <b>Saturday:</b> Choreographer showcases and preference sheet submission<br />
             <b>Sunday:</b> Audition day with different styles at specific times (Tap, Contemporary, Ballet, Hip-Hop)<br />
             <b>Results:</b> Announced Sunday evening, practices begin Monday<br />
@@ -180,7 +180,7 @@ class Auditions extends Component {
 
           <p>
             DanceTroupe auditions are divided between a Saturday and a Sunday at
-            the beginning of each term. For <b>Spring 2025</b>, they will be held on <b><u>February 8th and 9th, 2025</u></b> in <b><u>Lobby 13</u></b> and the <b><u>Mccormick for ballet and BC Porter Room for all other styles</u></b>, respectively. 
+            the beginning of each term. For <b>Fall 2025</b>, they will be held on <b><u>September 6th and 7th, 2025</u></b> in <b><u>La Sala</u></b> and the <b><u>Mccormick Dance Studio for ballet and BC Porter Room for all other styles</u></b>, respectively.
             Auditions are a laid-back, fun process, so nothing should stop you
             from auditioning!
           </p>
@@ -227,13 +227,13 @@ class Auditions extends Component {
             an audition number corresponding to your preference sheet.
 	      <ul>
         <li>Dancers auditioning for tap dances should participate in the
-            contemporary auditions from 10 - 11am.</li> 
+            contemporary auditions from 10 - 11am at the BC Porter Room.</li>
             <li>Dancers auditioning for contemporary dances should participate in the
-            contemporary auditions from 11 - 1pm.</li> 
+            contemporary auditions from 11 - 1pm at the BC Porter Room.</li>
             <li>Dancers auditioning for ballet dances should participate in the
-            ballet auditions from 1 - 2pm.</li> 
-	      <li>Those auditioning for hip-hop inspired 
-            dances should participate in the hip-hop inspired auditions from 2 - 4pm.</li>
+            ballet auditions from 1 - 2pm at the McCormick Dance Studio.</li>
+	      <li>Those auditioning for hip-hop inspired
+            dances should participate in the hip-hop inspired auditions from 2 - 4pm at the BC Porter Room.</li>
 	      </ul>
 	    You are welcome to come learn any of the pieces, and any dancers who
             have preffed multiple styles are recommended to participate in those respective auditions.
