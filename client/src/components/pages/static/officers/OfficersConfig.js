@@ -32,7 +32,7 @@ const officerOptions = [
   {
     position: "Pub Chair",
     name: "Richard Yeboah",
-    photoUrl: "/officer_images/Richard.jpg",
+    photoUrl: "/officer_images/Richard.JPG",
   },
   // {
   //   position: "Pub Chair",
