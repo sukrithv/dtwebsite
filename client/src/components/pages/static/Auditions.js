@@ -190,7 +190,7 @@ class Auditions extends Component {
             choreographers will demonstrate a snippet of their dance, talk about
             their music choices and the type of dancers they are looking for.
             This process gives prospective dancers a chance to watch all the
-            dances for the term and decide which to audition for. These will start at 10 am.
+            dances for the term and decide which to audition for. These will start at <b>10 am</b>.
           </p>
           <p>
             After showcases, each dancer must fill out an online preference
