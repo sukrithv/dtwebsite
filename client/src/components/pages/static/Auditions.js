@@ -172,7 +172,7 @@ class Auditions extends Component {
           <h2>TLDR</h2>
           <h3>
             <b>Date:</b> September 6th and 7th, 2025<br />
-            <b>Saturday:</b> Choreographer showcases and preference sheet submission at 10am<br />
+            <b>Saturday:</b> Choreographer showcases at 10am and preference sheet submission<br />
             <b>Sunday:</b> Audition day with different styles at specific times (Tap, Contemporary, Ballet, Hip-Hop)<br />
             <b>Results:</b> Announced Sunday evening, practices begin Monday<br />
             <b>Questions?</b> Email <a href="mailto:dt-officers@mit.edu">dt-officers@mit.edu</a>
