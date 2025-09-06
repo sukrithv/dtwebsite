@@ -11,6 +11,7 @@ export const styleOptions = [
     { key: 'o', text: 'Other', value: 'other' },
     { key: 'j', text: 'Jazz', value: 'jazz'},
     { key: 'jf', text: 'Jazz Funk', value: 'jazz funk'},
+    { key: 'jh', text: 'Jazz Heels', value: 'jazz heels'},
     {key: 'k', text: 'Kuthu', value: 'kuthu'},
     {key: 'm', text: 'Modern', value: 'modern'},
     {key: 'a', text: 'African Dance', value: 'african dance'},

@@ -56,7 +56,7 @@ class Shows extends Component {
 
     return (
       <div className='static-page'>
-        
+
         <h1>Shows</h1>
         <div id='show-description'>
           <p>
@@ -64,7 +64,7 @@ class Shows extends Component {
             We showcase a variety of dance styles, such as hip-hop inspired, contemporary, tap, jazz, and more!
         </p>
 
-	    <h3>Spring 2025 setlist announced Saturday, Feb 8 at showcase.</h3>
+	    <h3>Fall 2025 setlist announced Saturday, Sep 6 at showcase.</h3>
           <span>
             Currently viewing{' '}
             <Dropdown
