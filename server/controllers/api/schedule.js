@@ -52,18 +52,19 @@ app.get('/:dance_id',
       userConflicts.forEach(time => {
         // Record all times the choreographer is not available. Practices will usually never be
         // scheduled in these times.
+        const timeKey = new Date(time).toISOString();
         if (danceObj.choreographers.includes(prefsheet.user._id)) {
-          choreographerTimes.push(time);
+          choreographerTimes.push(timeKey);
         }
         // Check if this time is viewable in the current time to conflicts window.
-        if (timeToConflicts.hasOwnProperty(time)) {
-          var conflicts = timeToConflicts[time];
+        if (timeToConflicts.hasOwnProperty(timeKey)) {
+          var conflicts = timeToConflicts[timeKey];
           var newConflicts = conflicts.concat({
             firstName: prefsheet.user.firstName,
             lastName: prefsheet.user.lastName,
             description
           });
-          timeToConflicts[time] = newConflicts;
+          timeToConflicts[timeKey] = newConflicts;
         }
       });
     });
