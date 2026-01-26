@@ -50,7 +50,7 @@ app.get('/:dance_id',
       const description = isProd ? prefsheet.prodDescription : prefsheet.weeklyDescription;
       // Check if the user is unavailable in the generated time to conflicts dictionary.
       userConflicts.forEach(time => {
-        // Record all times the choreographer is not available. Practices will usually never be 
+        // Record all times the choreographer is not available. Practices will usually never be
         // scheduled in these times.
         if (danceObj.choreographers.includes(prefsheet.user._id)) {
           choreographerTimes.push(time);
