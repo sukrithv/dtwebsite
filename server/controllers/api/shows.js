@@ -176,19 +176,38 @@ app.post('/:show_id/active-show',
 
 // TODO: show and handle the following errors in the front-end.
 // Sets the selected show's prefsheets to be visible/open.
+// app.post('/:show_id/prefs',
+//   ensure.admin,
+//   (req, res) => {
+//     if (req.query.open != undefined) {
+//       Show.findById(req.params.show_id, async (err, doc) => {
+//         if (doc.prodConflictsOpen) {
+//           return res.status(400).send('Cannot open pref sheets while prod week availabilities are open.');
+//         }
+//         doc.prefsOpen = req.query.open;
+//         await doc.save();
+//         return res.status(200).send(doc);
+//       })
+//     }
+//   });
+
+// TEST FIX
 app.post('/:show_id/prefs',
   ensure.admin,
-  (req, res) => {
+  async (req, res) => {
     if (req.query.open != undefined) {
-      Show.findById(req.params.show_id, async (err, doc) => {
-        if (doc.prodConflictsOpen) {
+        const show = await Show.findById(req.params.show_id).select('prodConflictsOpen')
+        if (show.prodConflictsOpen){
           return res.status(400).send('Cannot open pref sheets while prod week availabilities are open.');
         }
-        doc.prefsOpen = req.query.open;
-        await doc.save();
-        return res.status(200).send(doc);
-      })
-    }
+        const updatedShow = await Show.findByIdAndUpdate(
+          req.params.show_id,
+          {prefsOpen: req.query.open},
+          {new: true}
+        )
+        return res.status(200).send(updatedShow);
+
+      }
   });
 
 // Sets the selected show's prod availabilities to be visible/open.
