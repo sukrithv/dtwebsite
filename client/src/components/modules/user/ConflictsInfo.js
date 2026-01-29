@@ -13,6 +13,7 @@ import axios from "axios";
 import ScheduleSelector from "@shannenwu/react-schedule-selector";
 import "./user.css";
 
+
 class ConflictsInfo extends React.Component {
   constructor(props) {
     super(props);
@@ -65,7 +66,6 @@ class ConflictsInfo extends React.Component {
     const constants = response.data;
 
     var startDate = new Date(constants.weekStartDate);
-    console.log(startDate);
     var numDays = constants.weekDays;
     var startTime = constants.weekStartHour; // 3pm
     var endTime = constants.weekEndHour; // 10:30 pm
