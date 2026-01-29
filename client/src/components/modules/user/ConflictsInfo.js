@@ -1,11 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 import {
-  Button, Dimmer, Form, List, Loader, Message, TextArea,
-} from 'semantic-ui-react';
-import axios from 'axios';
-import ScheduleSelector from '@shannenwu/react-schedule-selector';
-import './user.css';
+  Button,
+  Dimmer,
+  Form,
+  List,
+  Loader,
+  Message,
+  TextArea,
+} from "semantic-ui-react";
+import axios from "axios";
+import ScheduleSelector from "@shannenwu/react-schedule-selector";
+import "./user.css";
 
 class ConflictsInfo extends React.Component {
   constructor(props) {
@@ -17,7 +23,7 @@ class ConflictsInfo extends React.Component {
       startTime: null,
       endTime: null,
       dateFormat: null,
-      loading: true
+      loading: true,
     };
   }
 
@@ -30,44 +36,47 @@ class ConflictsInfo extends React.Component {
     handleSubmitConflicts: PropTypes.func.isRequired,
     handleDismiss: PropTypes.func.isRequired,
     messageFromServer: PropTypes.string,
-    errorMsg: PropTypes.array
-  }
+    errorMsg: PropTypes.array,
+  };
 
   static defaultProps = {
     isProd: false,
-    conflictsDescription: '',
-    messageFromServer: '',
-    errorMsg: []
-  }
+    conflictsDescription: "",
+    messageFromServer: "",
+    errorMsg: [],
+  };
 
   componentDidMount() {
     this.getConstants();
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.messageFromServer !== prevProps.messageFromServer
-      || this.props.errorMsg !== prevProps.errorMsg) {
+    if (
+      this.props.messageFromServer !== prevProps.messageFromServer ||
+      this.props.errorMsg !== prevProps.errorMsg
+    ) {
       this.scrollToBottom();
     }
   }
 
   getConstants = async () => {
     const { isProd } = this.props;
-    const response = await axios.get('/api/schedule/constants');
+    const response = await axios.get("/api/schedule/constants");
     const constants = response.data;
 
-    var startDate = constants.weekStartDate;
+    var startDate = new Date(constants.weekStartDate);
+    console.log(startDate);
     var numDays = constants.weekDays;
     var startTime = constants.weekStartHour; // 3pm
     var endTime = constants.weekEndHour; // 10:30 pm
-    var dateFormat = 'ddd';
+    var dateFormat = "ddd";
 
     if (isProd) {
-      startDate = constants.prodStartDate;
+      startDate = new Date(constants.prodStartDate);
       numDays = constants.prodDays;
       startTime = constants.prodStartHour; // 10am
       endTime = constants.prodEndHour; // 11:30pm
-      dateFormat = 'M/D';
+      dateFormat = "M/D";
     }
     this.setState({
       startDate,
@@ -75,12 +84,12 @@ class ConflictsInfo extends React.Component {
       startTime,
       endTime,
       dateFormat,
-      loading: false
-    })
-  }
+      loading: false,
+    });
+  };
 
   scrollToBottom() {
-    this.el.scrollIntoView({ behavior: 'smooth' });
+    this.el.scrollIntoView({ behavior: "smooth" });
   }
 
   render() {
@@ -93,22 +102,16 @@ class ConflictsInfo extends React.Component {
       handleSubmitConflicts,
       handleDismiss,
       errorMsg,
-      messageFromServer
+      messageFromServer,
     } = this.props;
 
-    const {
-      startDate,
-      numDays,
-      startTime,
-      endTime,
-      dateFormat,
-      loading
-    } = this.state;
+    const { startDate, numDays, startTime, endTime, dateFormat, loading } =
+      this.state;
 
     if (loading) {
       return (
-        <Dimmer active inverted className='conflicts-loader'>
-          <Loader content='Loading selection...' />
+        <Dimmer active inverted className="conflicts-loader">
+          <Loader content="Loading selection..." />
         </Dimmer>
       );
     }
@@ -116,16 +119,17 @@ class ConflictsInfo extends React.Component {
     return (
       <div>
         {isProd ? (
-          <Message info style={{textAlign: 'center'}}>
-            Please select all the times you are NOT available for prod week.
-            For times you are not available, please describe your conflict below.
+          <Message info style={{ textAlign: "center" }}>
+            Please select all the times you are NOT available for prod week. For
+            times you are not available, please describe your conflict below.
           </Message>
         ) : (
-            <Message info style={{textAlign: 'center'}}>
-              Please select all the times you are NOT available on a weekly basis.
-              For times you are not available, please describe your conflict below.
-            </Message>
-          )}
+          <Message info style={{ textAlign: "center" }}>
+            Please select all the times you are NOT available on a weekly basis.
+            For times you are not available, please describe your conflict
+            below.
+          </Message>
+        )}
         <ScheduleSelector
           selection={conflicts}
           startDate={startDate}
@@ -133,41 +137,47 @@ class ConflictsInfo extends React.Component {
           minTime={startTime}
           maxTime={endTime}
           dateFormat={dateFormat}
-          hoveredColor={'#f9c8c8'}
-          selectedColor={'#ff7f7f'}
+          hoveredColor={"#f9c8c8"}
+          selectedColor={"#ff7f7f"}
           onChange={handleScheduleChange}
         />
-        <Form style={{ paddingTop: '1em' }}>
+        <Form style={{ paddingTop: "1em" }}>
           <Form.Field>
             <label>Describe your weekly conflicts</label>
             <TextArea
-              name='conflictsDescription'
-              placeholder='Sundays 6-7: Chapter, Mondays 6-7:30: Volleyball'
-              value={conflictsDescription || ''}
+              name="conflictsDescription"
+              placeholder="Sundays 6-7: Chapter, Mondays 6-7:30: Volleyball"
+              value={conflictsDescription || ""}
               onChange={handleInputChange}
             />
           </Form.Field>
           {errorMsg.length !== 0 && (
-            <Message
-              className='message-response'
-              negative
-            >
-              <Message.Header
-                content='Error'
-              />
+            <Message className="message-response" negative>
+              <Message.Header content="Error" />
               <List items={errorMsg} />
             </Message>
           )}
-          {messageFromServer === 'Conflicts updated!' && (
+          {messageFromServer === "Conflicts updated!" && (
             <Message
-              className='message-response'
+              className="message-response"
               onDismiss={handleDismiss}
               header={messageFromServer}
               positive
             />
           )}
-          <Button floated='right' color='blue' onClick={handleSubmitConflicts} style={{ marginBottom: '1em' }}>Submit</Button>
-          <div ref={(el) => { this.el = el; }} />
+          <Button
+            floated="right"
+            color="blue"
+            onClick={handleSubmitConflicts}
+            style={{ marginBottom: "1em" }}
+          >
+            Submit
+          </Button>
+          <div
+            ref={(el) => {
+              this.el = el;
+            }}
+          />
         </Form>
       </div>
     );

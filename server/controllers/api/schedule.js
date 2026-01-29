@@ -14,7 +14,7 @@ const app = express.Router();
 app.get('/constants',
   ensure.loggedIn,
   (_req, res) => {
-    const timeConstants = { weekStartDate: util.weekStartDate, weekDays: util.weekDays, weekStartHour: util.weekStartHour, weekEndHour: util.weekEndHour, prodStartDate: util.prodStartDate, prodDays: util.prodDays, prodStartHour: util.prodStartHour, prodEndHour: util.prodEndHour };
+    const timeConstants = { weekStartDate: util.weekStartDate.toISOString(), weekDays: util.weekDays, weekStartHour: util.weekStartHour, weekEndHour: util.weekEndHour, prodStartDate: util.prodStartDate.toISOString(), prodDays: util.prodDays, prodStartHour: util.prodStartHour, prodEndHour: util.prodEndHour };
     res.status(200).send(timeConstants);
   })
 
