@@ -33,15 +33,7 @@ getWeekTimes = () => {
   for (var d = 0; d < weekDays; d++) {
     var currentDay = [];
     for (var h = weekStartHour; h <= weekEndHour; h += 0.5) {
-      // currentDay.push(addHours(addDays(startTime, d), h));
-      const utcDate = new Date(Date.UTC(
-        weekStartDate.getUTCFullYear(),
-        weekStartDate.getUTCMonth(),
-        weekStartDate.getUTCDate() + d,
-        Math.floor(h),
-        (h % 1) * 60
-      ));
-      currentDay.push(utcDate);
+      currentDay.push(addHours(addDays(startTime, d), h));
     }
     times.push(currentDay);
   }
