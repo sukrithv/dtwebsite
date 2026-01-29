@@ -62,6 +62,7 @@ getProdStartEnd = () => {
 }
 
 module.exports = {
+  addHours,
   getActiveShow,
   getWeekTimes,
   getWeekStartEnd,

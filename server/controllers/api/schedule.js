@@ -52,7 +52,7 @@ app.get('/:dance_id',
       userConflicts.forEach(time => {
         // Record all times the choreographer is not available. Practices will usually never be
         // scheduled in these times.
-        const timeKey = new Date(time).toISOString();
+        const timeKey = new Date(util.addHours(time,-4)).toISOString(); // PLEASE FIX DATETIME!!!
         if (danceObj.choreographers.includes(prefsheet.user._id)) {
           choreographerTimes.push(timeKey);
         }
