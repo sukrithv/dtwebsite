@@ -168,19 +168,19 @@ class Auditions extends Component {
     } else {
       return (
         <div className="static-page">
-          <h1>Auditions</h1>
+          <h1>Auditions (Spring 2026)</h1>
           <h2>TLDR</h2>
           <h3>
-            <b>Date:</b> September 6th and 7th, 2025<br />
+            <b>Date:</b> February 7th and 8th, 2026<br />
             <b>Saturday:</b> Choreographer showcases at 10am and preference sheet submission<br />
             <b>Sunday:</b> Audition day with different styles at specific times (Tap, Contemporary, Ballet, Hip-Hop)<br />
-            <b>Results:</b> Announced Sunday evening, practices begin Monday<br />
+            <b>Results:</b> Announced Sunday evening or Monday morning, practices begin Monday<br />
             <b>Questions?</b> Email <a href="mailto:dt-officers@mit.edu">dt-officers@mit.edu</a>
           </h3>
 
           <p>
             DanceTroupe auditions are divided between a Saturday and a Sunday at
-            the beginning of each term. For <b>Fall 2025</b>, they will be held on <b><u>September 6th and 7th, 2025</u></b> in <b><u>La Sala</u></b> and the <b><u>Mccormick Dance Studio for ballet and BC Porter Room for all other styles</u></b>, respectively.
+            the beginning of each term. For <b>Spring 2026</b>, they will be held on <b><u>February 7th and 8th, 2025</u></b> in <b><u>La Sala</u></b> and the <b><u>Mccormick Dance Studio for ballet and BC Porter Room for all other styles</u></b>, respectively.
             Auditions are a laid-back, fun process, so nothing should stop you
             from auditioning!
           </p>
@@ -227,7 +227,7 @@ class Auditions extends Component {
             an audition number corresponding to your preference sheet.
 	      <ul>
         <li>Dancers auditioning for tap dances should participate in the
-            contemporary auditions from 10 - 11am at the BC Porter Room.</li>
+            tap auditions from 10 - 11am at the BC Porter Room.</li>
             <li>Dancers auditioning for contemporary dances should participate in the
             contemporary auditions from 11 - 1pm at the BC Porter Room.</li>
             <li>Dancers auditioning for ballet dances should participate in the
