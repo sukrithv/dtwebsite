@@ -8,9 +8,49 @@
   padding: 0px 100px 0px 100px;
 }
 
-.static-page > h1 {
+.static-page h1 {
+  margin-bottom: 30px;
+}
+
+.static-page h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.static-page h3 {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.indented-text {
+  padding-left: 40px;
+  line-height: 1.8;
+}
+
+.distinct-section {
+  background: #f2f5f8;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.distinct-section h2 {
+  margin-top: 0;
+}
+/* .static-page > h1 {
   font-size: 2.5rem;
   margin-bottom: 25px;
+} */
+
+.distinct-section ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.distinct-section li {
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 900px) {

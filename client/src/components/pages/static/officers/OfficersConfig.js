@@ -11,8 +11,8 @@ const officerOptions = [
   },
   {
     position: "Vice President",
-    name: "Eunsu Choi",
-    photoUrl: "/officer_images/Eunsu.jpeg",
+    name: "Delia Harms",
+    photoUrl: "/officer_images/Delia.jpeg",
   },
   {
     position: "Secretary",
@@ -26,19 +26,19 @@ const officerOptions = [
   },
   {
     position: "Treasurer",
-    name: "Tiana Jiang",
-    photoUrl: "/officer_images/Tiana.jpg",
+    name: "Elyse Moore",
+    photoUrl: "/officer_images/Elyse.jpg",
   },
   {
     position: "Pub Chair",
-    name: "Richard Yeboah",
-    photoUrl: "/officer_images/Richard.JPG",
+    name: "Rachel Waggoner",
+    photoUrl: "/officer_images/Rachel.jpg",
   },
-  // {
-  //   position: "Pub Chair",
-  //   name: "Ekanem Okeke",
-  //   photoUrl: "/officer_images/Ekanem.jpg",
-  // },
+  {
+    position: "Pub Chair",
+    name: "Nicole Shigiltchoff",
+    photoUrl: "/officer_images/Nicole.jpg",
+  },
   {
     position: "Social Chair",
     name: "Lauren Kenol",
@@ -56,8 +56,8 @@ const officerOptions = [
   },
   {
     position: "Show Historian",
-    name: "Jaelynn Agraan",
-    photoUrl: "/officer_images/Jaelynn.jpg"
+    name: "Emily Daniels",
+    photoUrl: "/officer_images/Emily.jpg"
   },
   {
     position: "Webmaster",
