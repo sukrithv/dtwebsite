@@ -78,6 +78,8 @@
   line-height: normal;
   width: 60%;
   font-family: "Merriweather", serif !important;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
 }
 
 @media screen and (max-width: 900px) {
