@@ -229,9 +229,9 @@ class Auditions extends Component {
           <div className="distinct-section">
             <h3>Audition Schedule</h3>
 	      <div className="indented-text">
-        <strong>10-11AM</strong>: <strong>Tap</strong> auditions in the <strong>BC Porter Room</strong>.
-            <strong>11AM-1PM</strong>: <strong>Contemporary</strong> auditions in the <strong>BC Porter Room</strong>.
-            <strong>1-2PM</strong>: <strong>Ballet</strong> auditions in the <strong>McCormick Dance Studio</strong>.
+        <strong>10-11AM</strong>: <strong>Tap</strong> auditions in the <strong>BC Porter Room</strong>.<br />
+            <strong>11AM-1PM</strong>: <strong>Contemporary</strong> auditions in the <strong>BC Porter Room</strong>.<br />
+            <strong>1-2PM</strong>: <strong>Ballet</strong> auditions in the <strong>McCormick Dance Studio</strong>.<br />
 	      <strong>2-4PM</strong>: <strong>Hip-Hop</strong> auditions in the <strong>BC Porter Room</strong>.
 	      </div>
         You are welcome to come learn any of the pieces, and any dancers who

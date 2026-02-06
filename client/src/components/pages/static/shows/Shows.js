@@ -89,7 +89,27 @@ class Shows extends Component {
           </Table.Header>
 
           <Table.Body>
-            {showMap[selectedShowKey].dances.map((dance, index) => {
+            {showMap[selectedShowKey].dances
+            .slice()
+            .sort((danceOne, danceTwo) => {
+
+              const order = {
+                "attend tap audition": 1,
+                "attend ballet audition": 2,
+                "attend step audition": 3,
+                "attend contemp audition": 4,
+                "attend hip-hop inspired audition": 5,
+                "attend contemp audition or hip-hop inspired audition": 6,
+                "attend both contemp audition and hip-hop inspired audition": 7
+              };
+
+              const danceOneOrder = danceOne.hasOwnProperty('auditionNote') ? order[danceOne.auditionNote] || 99 : 99;
+              const danceTwoOrder = danceTwo.hasOwnProperty('auditionNote') ? order[danceTwo.auditionNote] || 99 : 99;
+
+              return danceOneOrder - danceTwoOrder;
+
+            })
+            .map((dance, index) => {
               return (
                 <Table.Row key={index}>
                   <Table.Cell>{dance.name}</Table.Cell>

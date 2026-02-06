@@ -65,8 +65,8 @@ class About extends Component {
           </Link>{" "}
           every semester, with five performances at the end of the semester. Our
           shows are made up of dances choreographed by students, and include
-          dance styles such as hip-hop inspired, jazz, ballet, tap, modern, and more. All
-          members who want to participate in the show must attend{" "}
+          dance styles such as hip-hop inspired, jazz, ballet, tap, modern, and
+          more. All members who want to participate in the show must attend{" "}
           <Link className="link-name" to="/auditions">
             auditions
           </Link>

@@ -1,23 +1,29 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 import {
-  Button, Dropdown, Form, Input, List, Message, Modal,
-} from 'semantic-ui-react';
-import axios from 'axios';
-import { styleOptions, levelOptions, auditionNoteOptions } from './DanceConfig';
+  Button,
+  Dropdown,
+  Form,
+  Input,
+  List,
+  Message,
+  Modal,
+} from "semantic-ui-react";
+import axios from "axios";
+import { styleOptions, levelOptions, auditionNoteOptions } from "./DanceConfig";
 
 class DanceModal extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      name: '',
-      description: '',
+      name: "",
+      description: "",
       choreographers: [],
-      style: '',
-      level: '',
-      videoUrl: '',
-      auditionNote: '',
+      style: "",
+      level: "",
+      videoUrl: "",
+      auditionNote: "",
       errorMsg: [],
     };
   }
@@ -28,7 +34,7 @@ class DanceModal extends React.Component {
     handleClose: PropTypes.func,
     show: PropTypes.object,
     danceObj: PropTypes.object,
-  }
+  };
 
   componentDidMount() {
     const { isNew, danceObj } = this.props;
@@ -37,11 +43,11 @@ class DanceModal extends React.Component {
       this.setState({
         name: danceObj.name,
         description: danceObj.description,
-        choreographers: danceObj.choreographers.map(obj => obj._id),
+        choreographers: danceObj.choreographers.map((obj) => obj._id),
         style: danceObj.style,
         level: danceObj.level,
         videoUrl: danceObj.videoUrl,
-        auditionNote: danceObj.auditionNote
+        auditionNote: danceObj.auditionNote,
       });
     }
   }
@@ -50,24 +56,24 @@ class DanceModal extends React.Component {
     const { isNew, handleClose } = this.props;
     if (isNew) {
       this.setState({
-        name: '',
-        description: '',
+        name: "",
+        description: "",
         choreographers: [],
-        style: '',
-        level: '',
-        videoUrl: '',
-        auditionNote: '',
+        style: "",
+        level: "",
+        videoUrl: "",
+        auditionNote: "",
         errorMsg: [],
       });
     }
     handleClose();
-  }
+  };
 
   handleChange = (e, { name, value }) => {
     this.setState({
       [name]: value,
     });
-  }
+  };
 
   handleSubmit = async (event) => {
     event.preventDefault();
@@ -81,24 +87,23 @@ class DanceModal extends React.Component {
       auditionNote,
     } = this.state;
 
-    const {
-      isNew,
-      show,
-      danceObj
-    } = this.props;
+    const { isNew, show, danceObj } = this.props;
 
-    const endpoint = isNew ? '/api/dances' : `/api/dances/update/${danceObj._id}`;
+    const endpoint = isNew
+      ? "/api/dances"
+      : `/api/dances/update/${danceObj._id}`;
 
-    axios.post(endpoint, {
-      name,
-      description,
-      choreographers,
-      style,
-      level,
-      videoUrl,
-      auditionNote,
-      show,
-    })
+    axios
+      .post(endpoint, {
+        name,
+        description,
+        choreographers,
+        style,
+        level,
+        videoUrl,
+        auditionNote,
+        show,
+      })
       .then((response) => {
         this.handleDanceModalClose();
       })
@@ -125,25 +130,18 @@ class DanceModal extends React.Component {
       errorMsg,
     } = this.state;
 
-    const {
-      isNew,
-      open,
-      userOptions,
-    } = this.props;
+    const { isNew, open, userOptions } = this.props;
 
     return (
       <div>
-        <Modal
-          open={open}
-          onClose={this.handleDanceModalClose}
-        >
-          <Modal.Header>{isNew ? 'Add Dance' : 'Edit Dance'}</Modal.Header>
+        <Modal open={open} onClose={this.handleDanceModalClose}>
+          <Modal.Header>{isNew ? "Add Dance" : "Edit Dance"}</Modal.Header>
           <Modal.Content scrolling>
             <Form onSubmit={this.handleSubmit}>
               <Form.Field>
                 <label>Choreographers</label>
                 <Dropdown
-                  name='choreographers'
+                  name="choreographers"
                   closeOnChange
                   selection
                   search
@@ -157,42 +155,38 @@ class DanceModal extends React.Component {
               </Form.Field>
               <Form.Field>
                 <label>Name</label>
-                <Input
-                  name='name'
-                  onChange={this.handleChange}
-                  value={name}
-                />
+                <Input name="name" onChange={this.handleChange} value={name} />
               </Form.Field>
               <Form.Field>
                 <label>Style</label>
                 <Dropdown
-                  name='style'
+                  name="style"
                   selection
                   search
                   scrolling
                   upward={false}
                   options={styleOptions}
-                  value={style || ''}
+                  value={style || ""}
                   onChange={this.handleChange}
                 />
               </Form.Field>
               <Form.Field>
                 <label>Level</label>
                 <Dropdown
-                  name='level'
+                  name="level"
                   selection
                   search
                   scrolling
                   upward={false}
                   options={levelOptions}
-                  value={level || ''}
+                  value={level || ""}
                   onChange={this.handleChange}
                 />
               </Form.Field>
               <Form.Field>
                 <label>Description</label>
                 <Input
-                  name='description'
+                  name="description"
                   onChange={this.handleChange}
                   value={description}
                 />
@@ -200,36 +194,41 @@ class DanceModal extends React.Component {
               <Form.Field>
                 <label>Audition Note</label>
                 <Dropdown
-                  name='auditionNote'
+                  name="auditionNote"
                   selection
                   search
                   scrolling
                   upward={false}
                   options={auditionNoteOptions}
-                  value={auditionNote || ''}
+                  value={auditionNote || ""}
                   onChange={this.handleChange}
                 />
               </Form.Field>
               <Form.Field>
                 <label>Video Url</label>
                 <Input
-                  name='videoUrl'
+                  name="videoUrl"
                   onChange={this.handleChange}
                   value={videoUrl}
                 />
               </Form.Field>
               {errorMsg.length !== 0 && (
-                <Message
-                  className='response'
-                  negative
-                >
-                  <Message.Header content='Please fix the following and try again.' />
+                <Message className="response" negative>
+                  <Message.Header content="Please fix the following and try again." />
                   <List items={errorMsg} />
                 </Message>
               )}
               <Modal.Actions>
-                <Button color='green' floated='right' onClick={this.handleSubmit}>Save</Button>
-                <Button floated='right' onClick={this.handleDanceModalClose}>Cancel</Button>
+                <Button
+                  color="green"
+                  floated="right"
+                  onClick={this.handleSubmit}
+                >
+                  Save
+                </Button>
+                <Button floated="right" onClick={this.handleDanceModalClose}>
+                  Cancel
+                </Button>
               </Modal.Actions>
             </Form>
           </Modal.Content>
