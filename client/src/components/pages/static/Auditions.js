@@ -173,7 +173,7 @@ class Auditions extends Component {
           <h2>TL;DR:</h2>
           <div className="indented-text">
             <strong>Dates:</strong> February 7th and 8th, 2026<br />
-            <strong>Feb. 7th (Sat):</strong> Choreographer showcases at 10am and preference sheet submission by midnight<br />
+            <strong>Feb. 7th (Sat):</strong> Choreographer showcases at 10am in Macgregor Dance Studio and preference sheet submission by midnight<br />
             <strong>Feb. 8th (Sun):</strong> Audition day with different styles at specific times below (Tap, Contemporary, Ballet, Hip-Hop)<br />
             <strong>Results:</strong> Announced Sunday evening (if not, then Monday morning), practices begin the next day<br />
             <strong>Questions?</strong> Email <a href="mailto:dt-officers@mit.edu">dt-officers@mit.edu</a>
@@ -182,7 +182,7 @@ class Auditions extends Component {
 
           <p>
             DanceTroupe auditions are divided between a Saturday and a Sunday at
-            the beginning of each term. For <b>Spring 2026</b>, they will be held on <b><u>February 7th and 8th, 2026</u></b> in <b><u>La Sala</u></b> and the <b><u>Mccormick Dance Studio for ballet and BC Porter Room for all other styles</u></b>, respectively.
+            the beginning of each term. For <b>Spring 2026</b>, they will be held on <b><u>February 7th and 8th, 2026</u></b> in <b><u>Macgregor Dance Studio</u></b> and the <b><u>Mccormick Dance Studio for ballet and BC Porter Room for all other styles</u></b>, respectively.
             Auditions are a laid-back, fun process, so nothing should stop you
             from auditioning!
           </p>
@@ -228,12 +228,12 @@ class Auditions extends Component {
             On Sunday, the full audition process begins.
           <div className="distinct-section">
             <h3>Audition Schedule</h3>
-	      <ul>
-        <li><strong>10AM - 11AM</strong>: <strong>Tap</strong> auditions in the <strong>BC Porter Room</strong>.</li>
-            <li><strong>11AM - 1PM</strong>: <strong>Contemporary</strong> auditions in the <strong>BC Porter Room</strong>.</li>
-            <li><strong>1PM - 2PM</strong>: <strong>Ballet</strong> auditions in the <strong>McCormick Dance Studio</strong>.</li>
-	      <li><strong>2PM - 4PM</strong>: <strong>Hip-Hop</strong> auditions in the <strong>BC Porter Room</strong>.</li>
-	      </ul>
+	      <div className="indented-text">
+        <strong>10-11AM</strong>: <strong>Tap</strong> auditions in the <strong>BC Porter Room</strong>.
+            <strong>11AM-1PM</strong>: <strong>Contemporary</strong> auditions in the <strong>BC Porter Room</strong>.
+            <strong>1-2PM</strong>: <strong>Ballet</strong> auditions in the <strong>McCormick Dance Studio</strong>.
+	      <strong>2-4PM</strong>: <strong>Hip-Hop</strong> auditions in the <strong>BC Porter Room</strong>.
+	      </div>
         You are welcome to come learn any of the pieces, and any dancers who
             have preffed multiple styles are recommended to participate in those respective auditions.
 

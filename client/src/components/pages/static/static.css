@@ -24,6 +24,10 @@
   color: #555;
 }
 
+.static-page strong {
+  font-weight: 900;
+}
+
 .indented-text {
   padding-left: 40px;
   line-height: 1.8;
@@ -34,6 +38,8 @@
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .distinct-section h2 {
