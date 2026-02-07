@@ -64,7 +64,7 @@ class Shows extends Component {
             We showcase a variety of dance styles, such as hip-hop inspired, contemporary, tap, jazz, and more!
         </p>
 
-	    <h3>Fall 2025 setlist announced Saturday, Sep 6 at showcase.</h3>
+	    <h3>Spring 2026 setlist announced Friday, Feb 6 at showcase.</h3>
           <span>
             Currently viewing{' '}
             <Dropdown
