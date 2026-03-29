@@ -255,7 +255,7 @@ class App extends React.Component {
         <div className="main-content">
           <div className="container">
             <Switch>
-              <Route exact path="/" render={(props) => <Home bgOpacity={bgOpacity} />} />
+              <Route exact path="/" render={(props) => <Home {...props} bgOpacity={bgOpacity} />} />
               <Route exact path="/about" component={About} />
               <Route exact path="/auditions" component={Auditions} />
               <Route exact path="/officers" component={Officers} />
