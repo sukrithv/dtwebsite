@@ -3,6 +3,10 @@
   padding: 0px 100px 0px 100px;
 }
 
+#home-page .static-page{
+  margin-top: 100vh;
+}
+
 .display-page {
   text-align: center;
   padding: 0px 100px 0px 100px;
