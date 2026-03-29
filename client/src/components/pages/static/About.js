@@ -26,36 +26,6 @@ class About extends Component {
           else in the area interested in dance.
         </p>
 
-        <h3>Officers</h3>
-        <p>
-          DanceTroupe is run entirely by a group of student officers, all of
-          whom are elected by the members of DanceTroupe. Officer terms are one
-          year (two semesters), and there are no term limits. To contact
-          officers, email{" "}
-          <a className="link-name" href="mailto:dt-officers@mit.edu">
-            dt-officers@mit.edu
-          </a>
-          . Current officers may be found on the{" "}
-          <Link className="link-name" to="/officers">
-            officers page
-          </Link>
-          .
-        </p>
-
-        <h3>Workshops</h3>
-        <p>
-          DanceTroupe offers workshops of different styles and levels to all of
-          its members throughout the year. No audition or experience is required
-          to attend! Check our{" "}
-          <a
-            className="link-name"
-            href="https://www.facebook.com/mitdancetroupe/"
-            target="_blank"
-          >
-            facebook page
-          </a>{" "}
-          for our workshop schedules!
-        </p>
 
         <h3>Show</h3>
         <p>
@@ -78,6 +48,39 @@ class About extends Component {
           First Showings and Second Showings (two full run-throughs of the show)
           and Production Week. Production Week occurs the week before the show
           performances and involves several dress rehearsals.
+        </p>
+
+        <h3>Workshops</h3>
+        <p>
+          DanceTroupe offers workshops of different styles and levels to all of
+          its members throughout the year. No audition or experience is required
+          to attend! Check our{" "}
+          <a
+            className="link-name"
+            href="https://www.facebook.com/mitdancetroupe/"
+            target="_blank"
+          >
+            facebook page
+          </a>{" "}
+          for our workshop schedules!
+        </p>
+
+
+
+        <h3>Officers</h3>
+        <p>
+          DanceTroupe is run entirely by a group of student officers, all of
+          whom are elected by the members of DanceTroupe. Officer terms are one
+          year (two semesters), and there are no term limits. To contact
+          officers, email{" "}
+          <a className="link-name" href="mailto:dt-officers@mit.edu">
+            dt-officers@mit.edu
+          </a>
+          . Current officers may be found on the{" "}
+          <Link className="link-name" to="/officers">
+            officers page
+          </Link>
+          .
         </p>
 
         <h3>Constitution</h3>
