@@ -215,7 +215,7 @@ class App extends React.Component {
   };
 
   render() {
-    const { userInfo, showBg, loading } = this.state;
+    const { userInfo, showBg, loading, bgOpacity } = this.state;
     if (loading) {
       return <Loader size="massive" content="Loading" />;
     }
