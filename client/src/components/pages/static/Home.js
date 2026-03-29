@@ -8,9 +8,10 @@ class Home extends Component {
   }
 
   render() {
+    const { bgOpacity } = this.props;
     return (
       <div id="home-page">
-        <div className="quote">
+        <div className="quote" style={{ opacity: bgOpacity }}>
           DanceTroupe is one of the largest dance organizations at MIT,
           bringing a unique variety of styles to the community.
         </div>

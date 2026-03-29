@@ -62,6 +62,7 @@ class App extends React.Component {
       loading: true,
       bgIndex: 0,
       showBg: false,
+      bgOpacity: 1
     };
   }
 
@@ -74,13 +75,14 @@ class App extends React.Component {
     this.setState({
       showBg,
     });
+    window.addEventListener("scroll", this.handleScroll);
   }
 
   componentDidUpdate(prevProps) {
     if (this.props.location !== prevProps.location) {
       const showBg = this.props.location.pathname === "/" ? true : false;
       this.setState({
-        showBg,
+        showBg,bgOpacity:1
       });
       this.onRouteChanged();
     }
@@ -88,7 +90,14 @@ class App extends React.Component {
 
   componentWillUnmount() {
     if (this.timeout) clearTimeout(this.timeout);
+    window.removeEventListener("scroll", this.handleScroll);
   }
+
+  handleScroll = () => {
+    const scrollRatio = window.scrollY / window.innerHeight;
+    const opacity = Math.max(0, 1 - scrollRatio * 2);
+    this.setState({ bgOpacity: opacity });
+  };
 
   changeBackground = () => {
     const { bgIndex } = this.state;
@@ -212,39 +221,41 @@ class App extends React.Component {
     }
     return (
       <div className="wrapper">
-        <div
-          className={showBg ? "absoluteBgd" : "noBgd"}
-          style={{
-            backgroundImage: `url(${this.bgs[0]})`,
-            animationDelay: "0s",
-          }}
-        />
-        <div
-          className={showBg ? "absoluteBgd" : "noBgd"}
-          style={{
-            backgroundImage: `url(${this.bgs[1]})`,
-            animationDelay: "2s",
-          }}
-        />
-        <div
-          className={showBg ? "absoluteBgd" : "noBgd"}
-          style={{
-            backgroundImage: `url(${this.bgs[2]})`,
-            animationDelay: "4s",
-          }}
-        />
-        <div
-          className={showBg ? "absoluteBgd" : "noBgd"}
-          style={{
-            backgroundImage: `url(${this.bgs[3]})`,
-            animationDelay: "6s",
-          }}
-        />
+        <div style={{ opacity: bgOpacity, transition: "opacity 0.1s" }}>
+          <div
+            className={showBg ? "absoluteBgd" : "noBgd"}
+            style={{
+              backgroundImage: `url(${this.bgs[0]})`,
+              animationDelay: "0s",
+            }}
+          />
+          <div
+            className={showBg ? "absoluteBgd" : "noBgd"}
+            style={{
+              backgroundImage: `url(${this.bgs[1]})`,
+              animationDelay: "2s",
+            }}
+          />
+          <div
+            className={showBg ? "absoluteBgd" : "noBgd"}
+            style={{
+              backgroundImage: `url(${this.bgs[2]})`,
+              animationDelay: "4s",
+            }}
+          />
+          <div
+            className={showBg ? "absoluteBgd" : "noBgd"}
+            style={{
+              backgroundImage: `url(${this.bgs[3]})`,
+              animationDelay: "6s",
+            }}
+          />
+        </div>
         <NavBar userInfo={userInfo} logout={this.logout} showBg={showBg} />
         <div className="main-content">
           <div className="container">
             <Switch>
-              <Route exact path="/" component={Home} />
+              <Route exact path="/" render={(props) => <Home bgOpacity={bgOpacity} />} />
               <Route exact path="/about" component={About} />
               <Route exact path="/auditions" component={Auditions} />
               <Route exact path="/officers" component={Officers} />
