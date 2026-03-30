@@ -17,9 +17,7 @@ class Home extends Component {
         </div>
 
         <div className="static-page">
-          <div className="info-cards">
-            <div className="card">
-              <h1>About</h1>
+          <h1>About</h1>
               <p>
                 Founded in 1994, the MIT DanceTroupe is the largest dance organization
                 at the Massachusetts Institute of Technology. We are a student-run
@@ -28,7 +26,7 @@ class Home extends Component {
                 various dance workshops to our members and produce one full length
                 show.
               </p>
-            </div>
+          <div className="info-cards">
             <div className="card">
               <h3>Membership</h3>
               <p>
