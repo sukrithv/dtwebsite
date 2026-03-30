@@ -39,13 +39,12 @@ class Home extends Component {
             <div className="card">
               <h3>Show</h3>
               <p>
-                DanceTroupe produces one full-length{" "}
+                We produce one full-length{" "}
                 <Link className="link-name" to="/shows">
                   show
                 </Link>{" "}
-                every semester, with five performances at the end of the semester. Our
-                shows are made up of dances choreographed by students, and include
-                dance styles such as hip-hop inspired, jazz, ballet, tap, modern, and
+                every semester, with four performances at the end of the semester. Dances are choreographed by students across
+                styles such as hip-hop inspired, jazz, ballet, tap, modern, and
                 more. All members who want to participate in the show must attend{" "}
                 <Link className="link-name" to="/auditions">
                   auditions
@@ -53,8 +52,8 @@ class Home extends Component {
                 , which take place at the beginning of each semester.
               </p>
               <p>
-                Members may participate in up to four dances, with one hour of weekly
-                rehearsal per dance. In addition to rehearsals, dancers must attend
+                Members may join up to four dances, each with one hour of weekly
+                rehearsal. Dancers must also attend
                 First Showings and Second Showings (two full run-throughs of the show)
                 and Production Week. Production Week occurs the week before the show
                 performances and involves several dress rehearsals.
@@ -86,9 +85,9 @@ class Home extends Component {
                 whom are elected by the members of DanceTroupe. Officer terms are one
                 year (two semesters), and there are no term limits. To contact
                 officers, email{" "}
-                <a className="link-name" href="mailto:dt-officers@mit.edu">
+                <b><a className="link-name" href="mailto:dt-officers@mit.edu">
                   dt-officers@mit.edu
-                </a>
+                </a></b>
                 . Current officers may be found on the{" "}
                 <Link className="link-name" to="/officers">
                   officers page
@@ -97,19 +96,16 @@ class Home extends Component {
               </p>
             </div>
 
-            <div className="card">
-              <h3>Constitution</h3>
               <p>
                 DanceTroupe abides by all MIT ASA policies. View our constitution{" "}
-                <a
+                <b><a
                   className="link-name"
                   href="http://web.mit.edu/dancetroupe/www/dt_constitution.pdf"
                   target="_blank"
                 >
                   here.
-                </a>
+                </a></b>
               </p>
-            </div>
           </div>
         </div>
       </div>
