@@ -1,78 +1,78 @@
 const officerOptions = [
   {
     position: "Show Coordinator",
-    name: "Leticia Barbieri Stroeh",
-    photoUrl: "/officer_images/Leticia.jpg",
+    name: "Rachel Waggoner",
+    photoUrl: "/officer_images/Rachel.jpeg",
   },
   {
     position: "President",
-    name: "Elena Baskakova",
-    photoUrl: "/officer_images/Elena.jpg",
+    name: "Samantha Belleman",
+    photoUrl: "/officer_images/Sam.jpeg",
   },
   {
     position: "Vice President",
-    name: "Delia Harms",
-    photoUrl: "/officer_images/Delia.jpeg",
+    name: "Lauren Kenol",
+    photoUrl: "/officer_images/LaurenK.jpeg",
   },
   {
     position: "Secretary",
-    name: "Samantha Belleman",
-    photoUrl: "/officer_images/Sam.jpg",
+    name: "Eleanor Murphy",
+    photoUrl: "/officer_images/Eleanor.JPG",
   },
   {
     position: "Treasurer",
-    name: "Nikhita Law",
-    photoUrl: "/officer_images/Nikhita.jpg",
+    name: "Elyse Moores",
+    photoUrl: "/officer_images/Elyse.jpeg",
   },
   {
     position: "Treasurer",
-    name: "Elyse Moore",
-    photoUrl: "/officer_images/Elyse.jpg",
+    name: "Annalisa Hurd",
+    photoUrl: "/officer_images/Annalisa.jpg",
   },
   {
     position: "Pub Chair",
-    name: "Rachel Waggoner",
-    photoUrl: "/officer_images/Rachel.jpg",
-  },
-  {
-    position: "Pub Chair",
-    name: "Nicole Shigiltchoff",
-    photoUrl: "/officer_images/Nicole.jpg",
-  },
-  {
-    position: "Social Chair",
-    name: "Lauren Kenol",
-    photoUrl: "/officer_images/LaurenK.jpg",
-  },
-  {
-    position: "Social Chair",
-    name: "Endy Lumy Okamura Miyashita",
-    photoUrl: "/officer_images/Endy.jpg",
-  },
-  {
-    position: "Media Historian",
     name: "Akua Yeboah",
     photoUrl: "/officer_images/Akua.jpg",
   },
   {
-    position: "Show Historian",
+    position: "Pub Chair",
+    name: "Angelica Zhu",
+    photoUrl: "/officer_images/Angelica.jpeg",
+  },
+  {
+    position: "Social Chair",
     name: "Emily Daniels",
-    photoUrl: "/officer_images/Emily.jpg"
+    photoUrl: "/officer_images/Emily.jpeg",
+  },
+  {
+    position: "Social Chair",
+    name: "Rozalen Adous",
+    photoUrl: "/officer_images/Rozalen.jpeg",
+  },
+  {
+    position: "Media Historian",
+    name: "Emma Bonilla",
+    photoUrl: "/officer_images/Emma.jpg",
+  },
+  {
+    position: "Show Historian",
+    name: "Juliana Abramson",
+    photoUrl: "/officer_images/Juliana.jpg"
   },
   {
     position: "Webmaster",
-    name: "Sukrith Velmineti",
-    photoUrl: "/officer_images/Sukrith.jpg",
+    name: "Alyssa Chu",
+    photoUrl: "/officer_images/Alyssa.jpg",
   },
   {
     position: "Tech Coordinator",
-    name: "Wendy Zhang",
-    photoUrl: "/officer_images/Wendy.jpg",
+    name: "Daoyuan Qian",
+    photoUrl: "/officer_images/Daoyuan.jpg",
   },
   {
     position: "Costume Coordinator",
-    name: "Rachel Waggoner",
-    photoUrl: "/officer_images/Rachel.jpg",
+    name: "Minea Tiitinen",
+    photoUrl: "/officer_images/Minea.jpg",
   },
 ];
 
