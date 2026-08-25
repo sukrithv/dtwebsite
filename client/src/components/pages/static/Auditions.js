@@ -168,13 +168,13 @@ class Auditions extends Component {
     } else {
       return (
         <div className="static-page">
-          <h1>Auditions (Spring 2026)</h1>
+          <h1>Auditions (Fall 2026)</h1>
           <div className="distinct-section">
           <h2>TL;DR:</h2>
           <div className="indented-text">
-            <strong>Dates:</strong> February 7th and 8th, 2026<br />
-            <strong>Feb. 7th (Sat):</strong> Choreographer showcases at 10am in Macgregor Dance Studio and preference sheet submission by midnight<br />
-            <strong>Feb. 8th (Sun):</strong> Audition day with different styles at specific times below (Tap, Contemporary, Ballet, Hip-Hop)<br />
+            <strong>Dates:</strong> September 12th and 13th, 2026<br />
+            <strong>Sept. 12th (Sat):</strong> Choreographer showcases 10-11:30am in the MacGregor Dance Studio and preference sheet submission by midnight<br />
+            <strong>Sept. 13th (Sun):</strong> Audition day with different styles at specific times below (Tap, Contemporary, Ballet, Hip-Hop)<br />
             <strong>Results:</strong> Announced Sunday evening (if not, then Monday morning), practices begin the next day<br />
             <strong>Questions?</strong> Email <a href="mailto:dt-officers@mit.edu">dt-officers@mit.edu</a>
           </div>
@@ -182,11 +182,11 @@ class Auditions extends Component {
 
           <p>
             DanceTroupe auditions are divided between a Saturday and a Sunday at
-            the beginning of each term. For <b>Spring 2026</b>, they will be held on <b><u>February 7th and 8th, 2026</u></b> in <b><u>Macgregor Dance Studio</u></b> and the <b><u>Mccormick Dance Studio for ballet and BC Porter Room for all other styles</u></b>, respectively.
+            the beginning of each term. For <b>Fall 2026</b>, they will be held on <b><u>September 12th and 13th, 2026</u></b> in the <b><u>MacGregor Dance Studio</u></b> and the <b><u>BC Porter Room</u></b>, respectively.
             Auditions are a laid-back, fun process, so nothing should stop you
             from auditioning!
           </p>
-          <h2>Saturday (2/7) - Showcase</h2>
+          <h2>Saturday (9/12) - Showcase</h2>
           <p>
             On Saturday, choreographer showcases are held. Each of the
             choreographers will demonstrate a snippet of their dance, talk about
@@ -223,21 +223,20 @@ class Auditions extends Component {
             </a>
 	  </p>
 
-          <h2>Sunday (2/8) - Audition</h2>
-          <p>
-            On Sunday, the full audition process begins.
+          <h2>Sunday (9/13) - Audition</h2>
+          <p>On Sunday, the full audition process begins.</p>
           <div className="distinct-section">
             <h3>Audition Schedule</h3>
-	      <div className="indented-text">
-        <strong>10-11AM</strong>: <strong>Tap</strong> auditions in the <strong>BC Porter Room</strong>.<br />
-            <strong>11AM-1PM</strong>: <strong>Contemporary</strong> auditions in the <strong>BC Porter Room</strong>.<br />
-            <strong>1-2PM</strong>: <strong>Ballet</strong> auditions in the <strong>McCormick Dance Studio</strong>.<br />
-	      <strong>2-4PM</strong>: <strong>Hip-Hop</strong> auditions in the <strong>BC Porter Room</strong>.
-	      </div>
-        You are welcome to come learn any of the pieces, and any dancers who
-            have preffed multiple styles are recommended to participate in those respective auditions.
-
+            <div className="indented-text">
+              <strong>10-11AM</strong>: <strong>Tap</strong> auditions in the <strong>BC Porter Room</strong>.<br />
+              <strong>11AM-1PM</strong>: <strong>Contemporary</strong> auditions in the <strong>BC Porter Room</strong>.<br />
+              <strong>1-2PM</strong>: <strong>Ballet</strong> auditions in the <strong>BC Porter Room</strong>.<br />
+              <strong>2-4PM</strong>: <strong>Hip-Hop</strong> auditions in the <strong>BC Porter Room</strong>.
+            </div>
           </div>
+          <p>
+            You are welcome to come learn any of the pieces, and any dancers who
+            have preffed multiple styles are recommended to participate in those respective auditions.
           </p>
 
           <h3>Audition Process</h3>
