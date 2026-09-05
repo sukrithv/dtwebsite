@@ -48,19 +48,24 @@ class App extends React.Component {
       secure: __SECURE__,
     });
     this.bgs = [
-      "/site_images/bg/bg0.jpeg",
-      "/site_images/bg/bg1.jpeg",
-      "/site_images/bg/bg2.jpeg",
-      "/site_images/bg/bg3.jpeg",
-      "/site_images/bg/bg4.jpeg",
-      "/site_images/bg/bg5.jpeg",
+      "/site_images/bg/bg0.png",
+      "/site_images/bg/bg1.png",
+      "/site_images/bg/bg2.png",
+      "/site_images/bg/bg3.png",
+      "/site_images/bg/bg4.png",
+      "/site_images/bg/bg5.png",
+      "/site_images/bg/bg6.png",
+      "/site_images/bg/bg7.png",
+
     ];
-    this.animDuration = 15;
+    this.bgHoldDuration = 2.5;
+    this.bgFadeDuration = 1.5;
 
     this.state = {
       userInfo: null,
       loading: true,
       bgIndex: 0,
+      bgFadingIn: false,
       showBg: false,
       bgOpacity: 1
     };
@@ -69,7 +74,7 @@ class App extends React.Component {
   componentDidMount() {
     this._isMounted = true;
     this.getUser();
-    this.timeout = setTimeout(this.changeBackground, this.animDuration * 1000);
+    this.scheduleBackgroundFade();
     // TODO modify behavior later
     const showBg = this.props.location.pathname === "/" ? true : false;
     this.setState({
@@ -89,7 +94,8 @@ class App extends React.Component {
   }
 
   componentWillUnmount() {
-    if (this.timeout) clearTimeout(this.timeout);
+    if (this.holdTimeout) clearTimeout(this.holdTimeout);
+    if (this.fadeTimeout) clearTimeout(this.fadeTimeout);
     window.removeEventListener("scroll", this.handleScroll);
   }
 
@@ -99,13 +105,19 @@ class App extends React.Component {
     this.setState({ bgOpacity: opacity });
   };
 
-  changeBackground = () => {
-    const { bgIndex } = this.state;
-    var nextBgIndex = (bgIndex + 1) % this.bgs.length;
-    this.setState({
-      bgIndex: nextBgIndex,
-    });
-    this.timeout = setTimeout(this.changeBackground, this.animDuration * 1000);
+  scheduleBackgroundFade = () => {
+    this.holdTimeout = setTimeout(() => {
+      this.setState({ bgFadingIn: true });
+      this.fadeTimeout = setTimeout(this.completeBackgroundFade, this.bgFadeDuration * 1000);
+    }, this.bgHoldDuration * 1000);
+  };
+
+  completeBackgroundFade = () => {
+    this.setState((prevState) => ({
+      bgIndex: (prevState.bgIndex + 1) % this.bgs.length,
+      bgFadingIn: false,
+    }));
+    this.scheduleBackgroundFade();
   };
 
   onRouteChanged = () => {
@@ -215,39 +227,24 @@ class App extends React.Component {
   };
 
   render() {
-    const { userInfo, showBg, loading, bgOpacity } = this.state;
+    const { userInfo, showBg, loading, bgOpacity, bgIndex, bgFadingIn } = this.state;
     if (loading) {
       return <Loader size="massive" content="Loading" />;
     }
+    const nextBgIndex = (bgIndex + 1) % this.bgs.length;
     return (
       <div className="wrapper">
         <div style={{ opacity: bgOpacity, transition: "opacity 0.1s" }}>
           <div
             className={showBg ? "absoluteBgd" : "noBgd"}
-            style={{
-              backgroundImage: `url(${this.bgs[0]})`,
-              animationDelay: "0s",
-            }}
+            style={{ backgroundImage: `url(${this.bgs[bgIndex]})` }}
           />
           <div
-            className={showBg ? "absoluteBgd" : "noBgd"}
+            className={showBg ? "absoluteBgdFade" : "noBgd"}
             style={{
-              backgroundImage: `url(${this.bgs[1]})`,
-              animationDelay: "2s",
-            }}
-          />
-          <div
-            className={showBg ? "absoluteBgd" : "noBgd"}
-            style={{
-              backgroundImage: `url(${this.bgs[2]})`,
-              animationDelay: "4s",
-            }}
-          />
-          <div
-            className={showBg ? "absoluteBgd" : "noBgd"}
-            style={{
-              backgroundImage: `url(${this.bgs[3]})`,
-              animationDelay: "6s",
+              backgroundImage: `url(${this.bgs[nextBgIndex]})`,
+              opacity: bgFadingIn ? 1 : 0,
+              transition: bgFadingIn ? "opacity 1.5s linear" : "none",
             }}
           />
         </div>

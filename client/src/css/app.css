@@ -66,37 +66,20 @@ p {
   width: 100vw;
   height: 100vh;
   position: fixed;
+  z-index: -2;
+  background-size: cover;
+}
+
+.absoluteBgdFade {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
   z-index: -1;
   background-size: cover;
-  animation-name: fade-in-and-out;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
 }
 
 .noBgd {
   display: none;
-}
-
-@keyframes fade-in-and-out {
-  0% {
-    opacity: 0;
-  }
-  15% {
-    opacity: 1;
-  }
-  30% {
-    opacity: 1;
-  }
-  45% {
-    opacity: 0.1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 
 @media screen and (max-width: 900px) {
